@@ -1,5 +1,9 @@
 #1/bin/bash
 
+if [-d '/tmp/changeworkerconfig']; then
+  rm -rf /tmp/changeworkerconfig
+fi
+
 mkdir /tmp/changeworkerconfig
 cd /tmp/changeworkerconfig
 
