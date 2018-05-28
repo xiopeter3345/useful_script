@@ -1,4 +1,4 @@
-#1/bin/bash
+#/bin/bash
 
 if [-d '/tmp/changeworkerconfig']; then
   rm -rf /tmp/changeworkerconfig
