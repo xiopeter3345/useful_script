@@ -8,6 +8,5 @@ Uninstall-Module -Name Az.Synapse -RequiredVersion 1.4.0
 Install-Module -Name Az.Synapse -RequiredVersion 1.3.0
 $accountsVersion = Get-Module -ListAvailable -Name "Az.Accounts"
 Write-Host $accountsVersion.Version
-$synapseVersion = Get-Module -ListAvailable -Name "Az.Synapse"
-Write-Host $synapseVersion.Version
+Get-Module -ListAvailable -Name "Az.Synapse"
 
