@@ -4,6 +4,8 @@ $indexFileUrl = "https://raw.githubusercontent.com/Azure/azure-synapse-analytics
 $sampleCodeIndex = Invoke-WebRequest $indexFileUrl | ConvertFrom-Json
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
+Select-AzSubscription -SubscriptionId f3e17940-3b2d-4749-bb6f-4aed418da05c
+
 Install-Module -Name Az.Synapse -RequiredVersion 1.3.0 -Force
 $accountsVersion = Get-Module -ListAvailable -Name "Az.Accounts"
 Write-Host $accountsVersion.Version
