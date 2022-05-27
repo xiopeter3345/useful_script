@@ -4,6 +4,10 @@ $indexFileUrl = "https://raw.githubusercontent.com/Azure/azure-synapse-analytics
 $sampleCodeIndex = Invoke-WebRequest $indexFileUrl | ConvertFrom-Json
 
 Install-Module Az.Synapse -Force
+$accountsVersion = Get-Module -ListAvailable -Name "Az.Accounts"
+Write-Host $accountsVersion.Version
+$synapseVersion = Get-Module -ListAvailable -Name "Az.Synapse"
+Write-Host $synapseVersion.Version
 
 foreach($sampleArtifactCollection in $sampleCodeIndex)
 {
