@@ -3,6 +3,8 @@ $synapseTokens = @{"`#`#azsynapsewks`#`#" = $SynapseWorkspaceName; }
 $indexFileUrl = "https://raw.githubusercontent.com/Azure/azure-synapse-analytics-end2end/main/Sample/index.json"
 $sampleCodeIndex = Invoke-WebRequest $indexFileUrl | ConvertFrom-Json
 
+Install-Module Az.Synapse -Force
+
 foreach($sampleArtifactCollection in $sampleCodeIndex)
 {
   Write-Host "Deploying Sample Artifact Collection: $($sampleArtifactCollection.template)"
